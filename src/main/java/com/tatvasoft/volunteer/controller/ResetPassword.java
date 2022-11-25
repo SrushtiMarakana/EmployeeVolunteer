@@ -13,8 +13,14 @@ public class ResetPassword {
 	@RequestMapping("/resetPassword")
 	public ModelAndView resetPassword(HttpServletRequest request, HttpServletResponse response) {
 
-		return new ModelAndView("resetPassword");
+		return new ModelAndView("forgotPassword");
 
 	}
 	
+	@RequestMapping("/resetNewPassword")
+	public ModelAndView resetNewPassword(HttpServletRequest request, HttpServletResponse response) {
+
+		return new ModelAndView("resetPassword");
+
+	}
 }

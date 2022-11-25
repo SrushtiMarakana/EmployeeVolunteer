@@ -32,7 +32,8 @@
       	true
       </property>
       
-      <mapping class="com.demo.hibernate.model.Employee" />
+      <mapping class="com.tatvasoft.volunteer.model.Users" />
+      <mapping class="com.tatvasoft.volunteer.model.Admins" />
       
    </session-factory>
 </hibernate-configuration>
