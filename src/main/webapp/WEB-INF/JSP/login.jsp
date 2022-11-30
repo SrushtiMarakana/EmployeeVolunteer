@@ -16,9 +16,9 @@ pageEncoding="UTF-8"  %>
     <link href="/resources/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-9">
+    <div class="container-fluid" style="margin:0%;padding:0%;">
+      <div class="row" style="margin:0%;padding:0%;">
+        <div class="col-lg-8" style="margin:0%;padding:0%;">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -28,28 +28,28 @@ pageEncoding="UTF-8"  %>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100 h-auto" alt="...">
+                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100" style="max-height: 100vh;" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
                   <h4 class="fs-3">Sed ut perspiciatis unde omnis iste natus voluptatem.</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100 h-auto" alt="...">
+                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100" style="max-height: 100vh;" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
                   <h4 class="fs-3">Sed ut perspiciatis unde omnis iste natus voluptatem.</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100 h-auto" alt="...">
+                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100" style="max-height: 100vh;" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
                   <h4 class="fs-3">Sed ut perspiciatis unde omnis iste natus voluptatem.</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100 h-auto" alt="...">
+                <img src="/resources/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" class="d-block w-100" style="max-height: 100vh;" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
                   <h4 class="fs-3">Sed ut perspiciatis unde omnis iste natus voluptatem.</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -58,38 +58,45 @@ pageEncoding="UTF-8"  %>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 p-4 pb-sm-1">
-          <div class="loginform">
-
-            <form action="login" method="post">
-            <%
-            	if(emsg != null){
-            %>
-            <div style="font-size:14px;color:red;" class="text-center"><%=emsg%></div>
-            <%
-            	}
-            %>
-            <%
-            	if(smsg != null){
-            %>
-            <div style="font-size:16px;color:#32CD32;" class="text-center"><%=smsg%></div>
-            <%
-            	}
-            %>
-              <label for="email" class="pt-3">Email Address</label><br>
-              <input type="email" name="email" required="" class="form-control">
-              
-              <label for="password" class="pt-3">Password</label><br>
-              <input type="password" id="pwd" name="password" maxlength="10" class="form-control" minlength="8" required="">
-              
-              <input class="btn btn-outline-warning w-100 mt-4 submit-button" type="submit" value="Login">
+        
+        <div class="col-lg-4 p-4" style="margin:0%;padding:0%;">
+          <div style="height: 90%;" class="align-items-center justify-content-center d-flex">
+            <form action="login" class="row g-3" method="post">
+                <div class="col-12">
+                <%
+            		if(emsg != null){
+            	%>
+           		 <div style="font-size:14px;color:red;" class="text-center"><%=emsg%></div>
+            	<%
+            		}
+            	%>
+            	<%
+            		if(smsg != null){
+            	%>
+            	<div style="font-size:16px;color:#32CD32;" class="text-center"><%=smsg%></div>
+            	<%
+            		}
+           		%>
+                  <label for="email" class="form-label mb-0">Email Address</label>
+                  <input type="email" name="email" required="" class="form-control">
+                </div>
+                <div class="col-12">
+                    <label for="password" class="form-label mb-0">Password</label><br>
+                    <input type="password" id="pwd" name="password" maxlength="10" class="form-control" minlength="8" required="">
+                </div>
+                <div class="col-12 mt-2">
+                    <input class="btn btn-outline-warning w-100 mt-4 submit-button" type="submit" value="Login">
+                </div>
+                <div class="col-12 mt-0">
+                    <div class="mt-3 text-center"><a class="link-1" href="forgotPassword">Lost your password?</a></div>
+                    <div class="mt-3 text-center mt-sm-1">Don't have an account?<a class="link" href="registration" > Create an Account</a></div>
+                </div>
             </form>
-              <div class="mt-3 text-center"><a class="link-1" href="forgotPassword">Lost your password?</a></div>
-              <div class="mt-3 text-center mt-sm-1">Don't have an account?<a class="link" href="registration" > Create an Account</a></div>
-            </div>
-            <div class="text-center"><a class="link-1" href="#">Privacy Policy</a></div>
           </div>
+          <div style="height: 10%;" class="align-items-center justify-content-center d-flex">
+            <div class="text-center privacyPolicy"><a class="link-1" href="registration">Privacy Policy</a></div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="/resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js" 
