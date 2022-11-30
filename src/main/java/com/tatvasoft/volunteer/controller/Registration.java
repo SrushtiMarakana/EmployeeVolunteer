@@ -34,7 +34,7 @@ public class Registration {
 		String password = request.getParameter("password");
 
 	    userService.insertUser(fname, lname, email, phoneno, password);
-		return new ModelAndView("redirect:/index");
+		return new ModelAndView("redirect:/index?smsg=Registration Successfully");
 	}
 
 }

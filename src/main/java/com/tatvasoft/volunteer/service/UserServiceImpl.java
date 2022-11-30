@@ -67,11 +67,39 @@ public class UserServiceImpl implements UserService{
             }	
         }
         else {
-        	mv.setViewName("redirect:/index");
+        	mv.setViewName("redirect:/index?emsg=Invalid Email Address or Password.");
         }
 		
 		return mv;
 		
+	}
+
+
+	@Override
+	public ModelAndView forFP(String email) {
+		
+		ModelAndView mv = new ModelAndView();
+		
+		List<Users> u = userDAO.getIdForFP(email);
+		
+		if(!u.isEmpty()) {
+			for(Users user : u){
+	              int userid = user.getUser_id();
+	              mv.addObject("userid", userid);
+	              mv.setViewName("resetPassword");
+			}
+		}
+		else {
+			mv.setViewName("redirect:/forgotPassword?emsg=This email is not exist please try another email.");
+		}
+	
+		return mv;
+	}
+
+
+	@Override
+	public void resetPassword(int userid, String password) {
+		userDAO.resetPassword(userid, password);
 	}
 
 }

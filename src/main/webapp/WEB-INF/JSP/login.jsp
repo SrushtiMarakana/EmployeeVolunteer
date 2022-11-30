@@ -2,6 +2,11 @@
 contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"  %>
 
+<%
+    		String emsg = (String)request.getAttribute("emsg");
+			String smsg = (String)request.getAttribute("smsg");
+%>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -58,6 +63,20 @@ pageEncoding="UTF-8"  %>
           <div class="loginform">
 
             <form action="login" method="post">
+            <%
+            	if(emsg != null){
+            %>
+            <div style="font-size:14px;color:red;" class="text-center"><%=emsg%></div>
+            <%
+            	}
+            %>
+            <%
+            	if(smsg != null){
+            %>
+            <div style="font-size:16px;color:#32CD32;" class="text-center"><%=smsg%></div>
+            <%
+            	}
+            %>
               <label for="email" class="pt-3">Email Address</label><br>
               <input type="email" name="email" required="" class="form-control">
               

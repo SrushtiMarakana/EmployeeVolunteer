@@ -25,8 +25,15 @@ public class Login {
 	}
 	
 	@RequestMapping("/index")
-	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) {
-
+	public ModelAndView index1(HttpServletRequest request, HttpServletResponse response) {
+		
+		if((request.getParameter("emsg")!= null) || (request.getParameter("smsg")!= null)) {
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("emsg",request.getParameter("emsg"));
+			mv.addObject("smsg",request.getParameter("smsg"));
+			mv.setViewName("login");
+			return mv;
+		}
 		return new ModelAndView("login");
 
 	}

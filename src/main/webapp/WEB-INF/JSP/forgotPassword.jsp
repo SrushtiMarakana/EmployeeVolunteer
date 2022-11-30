@@ -2,6 +2,10 @@
 contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"  %>
 
+<%
+    		String emsg = (String)request.getAttribute("emsg");
+%>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -57,8 +61,14 @@ pageEncoding="UTF-8"  %>
       <div class="col-lg-3 p-4 pb-sm-1">
         <div class="loginform">
           
-          <form action="#">
-
+          <form action="fpemail" method="post">
+           <%
+            	if(emsg != null){
+            %>
+            <div style="font-size:14px;color:red;" class="text-center"><%=emsg%></div>
+            <%
+            	}
+            %>
             <h5 class="text-center ">Forgot Password</h5>
               <div class="text-center text-muted">Enter your email address you've using for your account below and we will send you a password reset link</div>
 

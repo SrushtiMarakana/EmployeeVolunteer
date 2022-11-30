@@ -10,5 +10,7 @@ public interface UserService {
 	
 	public void insertUser(String fname, String lname, String email, Long phoneno, String password);
 	public ModelAndView isUserValid(HttpServletRequest request);
+	public ModelAndView forFP(String email);
+	public void resetPassword(int userid, String password);
 
 }

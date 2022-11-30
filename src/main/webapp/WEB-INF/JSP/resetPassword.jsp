@@ -2,6 +2,10 @@
 contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"  %>
 
+<%
+	int userid = (Integer)request.getAttribute("userid");
+%>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -58,9 +62,11 @@ pageEncoding="UTF-8"  %>
       <div class="col-lg-3 p-3 pt-lg-2 pt-xl-1">
         <div class="loginform">
           
-          <form action="#">
+          <form action="rpassword" method="post">
             <h5 class="text-center ">New Password</h5>
-              <div class="text-center text-muted">Please enter a new password in the fields below.</div>
+            <div class="text-center text-muted">Please enter a new password in the fields below.</div>
+            
+            <input type="hidden" name="userid" value="<%=userid%>">
             
             <label for="password" class="pt-3">New Password</label><br>
             <input type="password" id="pwd" name="password" maxlength="10" class="form-control" minlength="8" required="">
