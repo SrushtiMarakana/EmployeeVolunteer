@@ -69,11 +69,11 @@ pageEncoding="UTF-8"  %>
               <div class="col-12">
               	<input type="hidden" name="userid" value="<%=userid%>">
                 <label for="password" class="form-label mb-0">New Password</label><br>
-                <input type="password" id="pwd" name="password" maxlength="10" class="form-control" minlength="8" required="">
+                <input type="password" id="pwd" name="password" maxlength="10" class="form-control" minlength="8" required>
               </div>
               <div class="col-12">
                   <label for="cpassword" class="form-label mb-0">Confirm New Password</label><br>
-                  <input type="password" id="cpwd" name="cpassword" maxlength="10" class="form-control" minlength="8" required="">
+                  <input type="password" id="cpwd" name="cpassword" maxlength="10" class="form-control" minlength="8" required>
                   <span id="message" class="errormessage"></span><br>
               </div>
               <div class="col-12 mt-2">

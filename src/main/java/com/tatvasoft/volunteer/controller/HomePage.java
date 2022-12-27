@@ -15,7 +15,7 @@ public class HomePage {
 	public ModelAndView homePage(HttpServletRequest request, HttpServletResponse response) {
 
 		HttpSession session = request.getSession(false);
-		if((session.getAttribute("authenticated")) != null ) {
+		if((session.getAttribute("authenticated")) != null) {
 			
 			return new ModelAndView("homePage");
 		}

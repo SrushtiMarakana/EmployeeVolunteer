@@ -34,6 +34,27 @@
       
       <mapping class="com.tatvasoft.volunteer.model.Users" />
       <mapping class="com.tatvasoft.volunteer.model.Admins" />
+      <mapping class="com.tatvasoft.volunteer.model.City" />
+      <mapping class="com.tatvasoft.volunteer.model.Country" />
+      <mapping class="com.tatvasoft.volunteer.model.Banner" />
+      <mapping class="com.tatvasoft.volunteer.model.CMS_Page" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Theme" />
+      <mapping class="com.tatvasoft.volunteer.model.Skill" />
+      <mapping class="com.tatvasoft.volunteer.model.User_Skill" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission" />
+      <mapping class="com.tatvasoft.volunteer.model.Comment" />
+      <mapping class="com.tatvasoft.volunteer.model.Favourite_Mission" />
+      <mapping class="com.tatvasoft.volunteer.model.Goal_Mission" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Application" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Document" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Invite" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Media" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Rating" />
+      <mapping class="com.tatvasoft.volunteer.model.Mission_Skill" />
+      <mapping class="com.tatvasoft.volunteer.model.Story" />
+      <mapping class="com.tatvasoft.volunteer.model.Story_Invite" />
+      <mapping class="com.tatvasoft.volunteer.model.Story_Media" />
+      <mapping class="com.tatvasoft.volunteer.model.Timesheet" />
       
    </session-factory>
 </hibernate-configuration>

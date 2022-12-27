@@ -8,22 +8,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
-public class Admin {
+public class AdminMission {
 	
-	@RequestMapping("/admin")
-	public ModelAndView admin(HttpServletRequest request, HttpServletResponse response) {
+	@RequestMapping("/adminMission")
+	public ModelAndView adminMission(HttpServletRequest request, HttpServletResponse response) {
 
 		HttpSession session = request.getSession(false);
-		if((session.getAttribute("authenticated")) != null ) {
-			return new ModelAndView("admin");
+		if((session.getAttribute("adminauthenticated")) != null ) {
+			
+			ModelAndView mv = new ModelAndView();
+			
+	        mv.setViewName("adminMission");
+			
+			return mv;
+			
+		}
+		else if((session.getAttribute("authenticated")) != null ) {
+			return new ModelAndView("redirect:/homePage");
 		}
 		else {
 			return new ModelAndView("redirect:/index");
 		}
 
 	}
-	
-	
 
 }

@@ -1,11 +1,12 @@
 package com.tatvasoft.volunteer.dao;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
 import com.tatvasoft.volunteer.model.Admins;
 
+@Component
 public interface AdminDAO {
 	
-	public List<Admins> isAdminExist(String email,String password);
+	public Admins isAdminExist(String email,String password);
 
 }
